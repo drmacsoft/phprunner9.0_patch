@@ -1,0 +1,899 @@
+include\dbcommon.php include\dbcommon.php
+include\appsettings.php include\appsettings.php
+include\commonfunctions.php include\commonfunctions.php
+include\phpfunctions.php include\phpfunctions.php
+include\locale.php include\locale.php
+include\import_functions_excel.php include\import_functions_excel.php
+include\commonevents.php include\events.php
+include\common\ajaxsuggest.js include\ajaxsuggest.js
+include\common\jquery.js include\jquery.js
+
+classes\sql.php classes\sql.php
+classes\charts.php classes\charts.php
+classes\layout.php classes\layout.php
+classes\reportlib.php classes\reportlib.php
+classes\reportpage.php classes\reportpage.php
+classes\reportprintpage.php classes\reportprintpage.php
+classes\chartpage.php classes\chartpage.php
+classes\chartpage_master.php classes\chartpage_master.php
+classes\searchcontrol.php classes\searchcontrol.php
+classes\panelsearchcontrol.php classes\panelsearchcontrol.php
+classes\advancedsearchcontrol.php classes\advancedsearchcontrol.php
+classes\security.php classes\security.php
+classes\runnerpage.php classes\runnerpage.php
+classes\projectsettings.php classes\projectsettings.php
+classes\button.php classes\button.php
+classes\addpage.php classes\addpage.php
+classes\editpage.php classes\editpage.php
+classes\viewpage.php classes\viewpage.php
+classes\listpage.php classes\listpage.php
+classes\orderclause.php classes\orderclause.php
+classes\rightspage.php classes\rightspage.php
+classes\searchpage.php classes\searchpage.php
+classes\searchpage_dash.php classes\searchpage_dash.php
+classes\searchclause.php classes\searchclause.php
+##if @BUILDER.nLoginMethod==SECURITY_AD##
+classes\rightspage_ad.php classes\rightspage_ad.php
+classes\memberspage_ad.php classes\memberspage_ad.php
+##endif##
+classes\listpage_simple.php classes\listpage_simple.php
+classes\cipherer.php classes\cipherer.php
+classes\runnerldap.php classes\runnerldap.php
+classes\importpage.php classes\importpage.php
+classes\exportpage.php classes\exportpage.php
+classes\printpage.php classes\printpage.php
+classes\printpage_details.php classes\printpage_details.php
+classes\listpage_ajax.php classes\listpage_ajax.php
+classes\listpage_master.php classes\listpage_master.php
+classes\dashboardpage.php classes\dashboardpage.php
+
+classes\memberspage.php classes\memberspage.php
+classes\listpage_embed.php classes\listpage_embed.php
+classes\listpage_lookup.php classes\listpage_lookup.php
+classes\listpage_dpinline.php classes\listpage_dpinline.php
+classes\listpage_dplist.php classes\listpage_dplist.php
+classes\listpage_dpdash.php classes\listpage_dpdash.php
+classes\listpage_dashboard.php classes\listpage_dashboard.php
+classes\map_dashboard.php classes\map_dashboard.php
+classes\searchpanel.php classes\searchpanel.php
+classes\searchpanelsimple.php classes\searchpanelsimple.php
+classes\searchpanellookup.php classes\searchpanellookup.php
+classes\filterpanel.php classes\filterpanel.php
+classes\searchParamsLogger.php classes\searchParamsLogger.php
+
+classes\uploadhandler.php classes\uploadhandler.php
+
+classes\crosstable_report.php classes\crosstable_report.php
+
+classes\controls\Control.php classes\controls\Control.php
+classes\controls\EditControlsContainer.php classes\controls\EditControlsContainer.php
+classes\controls\CheckboxField.php classes\controls\CheckboxField.php
+classes\controls\DatabaseFileField.php classes\controls\DatabaseFileField.php
+classes\controls\TextControl.php classes\controls\TextControl.php
+classes\controls\DateTimeControl.php classes\controls\DateTimeControl.php
+classes\controls\DateField.php classes\controls\DateField.php
+classes\controls\FileField.php classes\controls\FileField.php
+classes\controls\FileFieldSingle.php classes\controls\FileFieldSingle.php
+classes\controls\HiddenField.php classes\controls\HiddenField.php
+classes\controls\LookupField.php classes\controls\LookupField.php
+classes\controls\LookupTextField.php classes\controls\LookupTextField.php
+classes\controls\PasswordField.php classes\controls\PasswordField.php
+classes\controls\ReadOnlyField.php classes\controls\ReadOnlyField.php
+classes\controls\TextAreaField.php classes\controls\TextAreaField.php
+classes\controls\TextField.php classes\controls\TextField.php
+classes\controls\TimeField.php classes\controls\TimeField.php
+classes\controls\UserControl.php classes\controls\UserControl.php
+
+classes\controls\ViewUserControl.php classes\controls\ViewUserControl.php
+classes\controls\ViewControl.php classes\controls\ViewControl.php
+classes\controls\ViewHTMLField.php classes\controls\ViewHTMLField.php
+classes\controls\ViewControlsContainer.php classes\controls\ViewControlsContainer.php
+classes\controls\ViewAudioFileField.php classes\controls\ViewAudioFileField.php
+classes\controls\ViewCheckboxField.php classes\controls\ViewCheckboxField.php
+classes\controls\ViewCurrencyField.php classes\controls\ViewCurrencyField.php
+classes\controls\ViewCustomField.php classes\controls\ViewCustomField.php
+classes\controls\ViewDatabaseAudioField.php classes\controls\ViewDatabaseAudioField.php
+classes\controls\ViewDatabaseFileField.php classes\controls\ViewDatabaseFileField.php
+classes\controls\ViewDatabaseImageField.php classes\controls\ViewDatabaseImageField.php
+classes\controls\ViewDatabaseVideoField.php classes\controls\ViewDatabaseVideoField.php
+classes\controls\ViewDatetimeField.php classes\controls\ViewDatetimeField.php
+classes\controls\ViewFileField.php classes\controls\ViewFileField.php
+classes\controls\ViewImageDownloadField.php classes\controls\ViewImageDownloadField.php
+classes\controls\ViewFileDownloadField.php classes\controls\ViewFileDownloadField.php
+classes\controls\ViewEmailHyperlinkField.php classes\controls\ViewEmailHyperlinkField.php
+classes\controls\ViewHyperlinkField.php classes\controls\ViewHyperlinkField.php
+classes\controls\ViewLongDateField.php classes\controls\ViewLongDateField.php
+classes\controls\ViewMapField.php classes\controls\ViewMapField.php
+classes\controls\ViewNumberField.php classes\controls\ViewNumberField.php
+classes\controls\ViewPercentField.php classes\controls\ViewPercentField.php
+classes\controls\ViewPhoneNumberField.php classes\controls\ViewPhoneNumberField.php
+classes\controls\ViewShortDateField.php classes\controls\ViewShortDateField.php
+classes\controls\ViewTimeField.php classes\controls\ViewTimeField.php
+classes\controls\ViewVideoFileField.php classes\controls\ViewVideoFileField.php
+classes\controls\ViewLookupWizardField.php classes\controls\ViewLookupWizardField.php
+
+classes\controls\FilterControl.php classes\controls\FilterControl.php
+classes\controls\FilterValuesList.php classes\controls\FilterValuesList.php
+classes\controls\FilterBoolean.php classes\controls\FilterBoolean.php
+classes\controls\FilterIntervalList.php classes\controls\FilterIntervalList.php
+classes\controls\FilterIntervalSlider.php classes\controls\FilterIntervalSlider.php
+classes\controls\FilterIntervalDateSlider.php classes\controls\FilterIntervalDateSlider.php
+classes\controls\FilterIntervalTimeSlider.php classes\controls\FilterIntervalTimeSlider.php
+
+mfhandler.php mfhandler.php
+
+include\common\bootstrap include\bootstrap
+include\common\ResizeSensor include\ResizeSensor
+include\common\colresizable.js include\colresizable.js
+
+##if @BUILDER.tables[arrFieldObj[viewFormats[strViewFormat==FORMAT_FILE_IMAGE].len].len].len##
+include\common\sudo\ include\sudo
+include\common\sudo\jquery.sudoSlider.js include\sudo\jquery.sudoSlider.js
+##endif##
+
+##if @BUILDER.tables[arrFieldObj[editFormats[strEditFormat==EDIT_FORMAT_DATABASE_FILE
+		|| strEditFormat==EDIT_FORMAT_FILE || strEditFormat==EDIT_FORMAT_DATABASE_IMAGE].len
+	|| viewFormats[strViewFormat==FORMAT_FILE
+		|| strViewFormat==FORMAT_FILE_IMAGE || strViewFormat==FORMAT_DATABASE_IMAGE].len].len].len##
+include\common\zoombox\ include\zoombox\
+##endif##
+
+include\common\jquery-ui include\jquery-ui
+
+##if @BUILDER.tables[arrFieldObj[editFormats[strEditFormat == EDIT_FORMAT_LOOKUP_WIZARD && bAllowMultipleSelection && ( pLookupObj.nControlType == LCT_DROPDOWN && nSelectSize == 1 || pLookupObj.nControlType == LCT_AJAX || pLookupObj.nControlType == LCT_LIST ) ].len].len].len##
+include\common\chosen include\chosen
+##endif##
+
+include\ciphererdes.php include\ciphererdes.php
+include\ciphereraes.php include\ciphereraes.php
+
+include\common\loadfirst.js include\loadfirst.js
+
+include\common\jquery.js include\jquery.js
+include\common\json.js include\json.js
+include\common\crosstable.js include\crosstable.js
+
+include\common\jquery.inputhintbox.js include\jquery.inputhintbox.js
+
+##if @BUILDER.m_bDebug##
+include\common\runnerJS\Runner.js include\runnerJS\Runner.js
+include\common\runnerJS\Observer.js include\runnerJS\Observer.js
+include\common\runnerJS\Util.js include\runnerJS\Util.js
+include\common\runnerJS\RunnerBricks.js include\runnerJS\RunnerBricks.js
+include\common\runnerJS\RunnerMenu.js include\runnerJS\RunnerMenu.js
+##if @BUILDER.AuditTrailSettings.bEnableLocking##
+include\common\runnerJS\RunnerLocking.js include\runnerJS\RunnerLocking.js
+##endif##
+##if @BUILDER.bSection508Compatibility##
+include\common\runnerJS\RunnerSection508.js include\runnerJS\RunnerSection508.js
+##endif##
+##if @BUILDER.tables[resizeColumns].len##
+include\common\runnerJS\RunnerResizeGrid.js include\runnerJS\RunnerResizeGrid.js
+##endif##
+include\common\runnerJS\ControlConstants.js include\runnerJS\ControlConstants.js
+include\common\runnerJS\RunnerEvent.js include\runnerJS\RunnerEvent.js
+include\common\runnerJS\Validate.js include\runnerJS\Validate.js
+include\common\runnerJS\ControlManager.js include\runnerJS\ControlManager.js
+include\common\runnerJS\button.js include\runnerJS\button.js
+include\common\runnerJS\Control.js include\runnerJS\Control.js
+include\common\runnerJS\MockControl.js include\runnerJS\MockControl.js
+include\common\runnerJS\ViewControl.js include\runnerJS\ViewControl.js
+include\common\runnerJS\ViewVideoField.js include\runnerJS\ViewVideoField.js
+include\common\runnerJS\ViewImageField.js include\runnerJS\ViewImageField.js
+include\common\runnerJS\ViewFileField.js include\runnerJS\ViewFileField.js
+include\common\runnerJS\ViewDatabaseImageField.js include\runnerJS\ViewDatabaseImageField.js
+include\common\runnerJS\ReadOnly.js include\runnerJS\ReadOnly.js
+include\common\runnerJS\TextAreaControl.js include\runnerJS\TextAreaControl.js
+include\common\runnerJS\TextFieldControl.js include\runnerJS\TextFieldControl.js
+include\common\runnerJS\TimeFieldControl.js include\runnerJS\TimeFieldControl.js
+include\common\runnerJS\RteControl.js include\runnerJS\RteControl.js
+include\common\runnerJS\FileControl.js include\runnerJS\FileControl.js
+include\common\runnerJS\MultiUploadControl.js include\runnerJS\MultiUploadControl.js
+include\common\runnerJS\DateFieldControl.js include\runnerJS\DateFieldControl.js
+include\common\runnerJS\LookupWizard.js include\runnerJS\LookupWizard.js
+include\common\runnerJS\RadioControl.js include\runnerJS\RadioControl.js
+include\common\runnerJS\DropDown.js include\runnerJS\DropDown.js
+include\common\runnerJS\CheckBox.js include\runnerJS\CheckBox.js
+include\common\runnerJS\CheckBoxLookup.js include\runnerJS\CheckBoxLookup.js
+include\common\runnerJS\TextFieldLookup.js include\runnerJS\TextFieldLookup.js
+include\common\runnerJS\EditBoxLookup.js include\runnerJS\EditBoxLookup.js
+include\common\runnerJS\ListPageLookup.js include\runnerJS\ListPageLookup.js
+include\common\runnerJS\InlineEdit.js include\runnerJS\InlineEdit.js
+
+include\common\runnerJS\pages\PageConstants.js include\runnerJS\pages\PageConstants.js
+include\common\runnerJS\pages\RunnerDefaults.js include\runnerJS\pages\RunnerDefaults.js
+include\common\runnerJS\pages\PageManager.js include\runnerJS\pages\PageManager.js
+include\common\runnerJS\pages\PageSettings.js include\runnerJS\pages\PageSettings.js
+include\common\runnerJS\pages\RunnerPage.js include\runnerJS\pages\RunnerPage.js
+include\common\runnerJS\pages\SearchPage.js include\runnerJS\pages\SearchPage.js
+include\common\runnerJS\pages\ViewPage.js include\runnerJS\pages\ViewPage.js
+include\common\runnerJS\pages\LoginPage.js include\runnerJS\pages\LoginPage.js
+include\common\runnerJS\pages\RemindPage.js include\runnerJS\pages\RemindPage.js
+include\common\runnerJS\pages\EditorPage.js include\runnerJS\pages\EditorPage.js
+include\common\runnerJS\pages\AddPageFly.js include\runnerJS\pages\AddPageFly.js
+include\common\runnerJS\pages\AddPage.js include\runnerJS\pages\AddPage.js
+include\common\runnerJS\pages\AddPageDash.js include\runnerJS\pages\AddPageDash.js
+include\common\runnerJS\pages\EditPage.js include\runnerJS\pages\EditPage.js
+include\common\runnerJS\pages\EditPageDash.js include\runnerJS\pages\EditPageDash.js
+include\common\runnerJS\pages\PrintPdf.js include\runnerJS\pages\PrintPdf.js
+include\common\runnerJS\pages\PrintPageCommon.js include\runnerJS\pages\PrintPageCommon.js
+include\common\runnerJS\pages\PrintPage.js include\runnerJS\pages\PrintPage.js
+include\common\runnerJS\pages\ReportPrintPage.js include\runnerJS\pages\ReportPrintPage.js
+
+include\common\runnerJS\pages\DataPageWithSearch.js include\runnerJS\pages\DataPageWithSearch.js
+include\common\runnerJS\pages\ListPageCommon.js include\runnerJS\pages\ListPageCommon.js
+include\common\runnerJS\pages\ListPageFly.js include\runnerJS\pages\ListPageFly.js
+include\common\runnerJS\pages\ListPage.js include\runnerJS\pages\ListPage.js
+include\common\runnerJS\pages\ListPageAjax.js include\runnerJS\pages\ListPageAjax.js
+include\common\runnerJS\pages\ListPageDP.js include\runnerJS\pages\ListPageDP.js
+include\common\runnerJS\pages\ChartPageDP.js include\runnerJS\pages\ChartPageDP.js
+include\common\runnerJS\pages\ChartPageMobileDP.js include\runnerJS\pages\ChartPageMobileDP.js
+include\common\runnerJS\pages\ChartPageDash.js include\runnerJS\pages\ChartPageDash.js
+include\common\runnerJS\pages\ReportPageDP.js include\runnerJS\pages\ReportPageDP.js
+include\common\runnerJS\pages\ReportPageMobileDP.js include\runnerJS\pages\ReportPageMobileDP.js
+include\common\runnerJS\pages\ListPageMobile.js include\runnerJS\pages\ListPageMobile.js
+include\common\runnerJS\pages\ListPageMobileDP.js include\runnerJS\pages\ListPageMobileDP.js
+include\common\runnerJS\pages\ReportPageMobile.js include\runnerJS\pages\ReportPageMobile.js
+include\common\runnerJS\pages\ReportPage.js include\runnerJS\pages\ReportPage.js
+include\common\runnerJS\pages\ChartPage.js include\runnerJS\pages\ChartPage.js
+include\common\runnerJS\pages\ChartPageMobile.js include\runnerJS\pages\ChartPageMobile.js
+
+include\common\runnerJS\pages\DashboardPage.js include\runnerJS\pages\DashboardPage.js
+include\common\runnerJS\pages\DashboardPageMobile.js include\runnerJS\pages\DashboardPageMobile.js
+include\common\runnerJS\pages\ListPageDash.js include\runnerJS\pages\ListPageDash.js
+
+include\common\runnerJS\pages\DashboardMap.js include\runnerJS\pages\DashboardMap.js
+include\common\runnerJS\pages\DashboardLeadingMap.js include\runnerJS\pages\DashboardLeadingMap.js
+include\common\runnerJS\pages\DashboardGridBasedMap.js include\runnerJS\pages\DashboardGridBasedMap.js
+
+include\common\runnerJS\pages\CheckboxesPage.js include\runnerJS\pages\CheckboxesPage.js
+include\common\runnerJS\pages\MembersPage.js include\runnerJS\pages\MembersPage.js
+include\common\runnerJS\pages\RightsPage.js include\runnerJS\pages\RightsPage.js
+##if @BUILDER.nLoginMethod==SECURITY_AD##
+include\common\runnerJS\pages\RightsPageAD.js include\runnerJS\pages\RightsPageAD.js
+include\common\runnerJS\pages\MembersPageAD.js include\runnerJS\pages\MembersPageAD.js
+##endif##
+include\common\runnerJS\pages\ExportPage.js include\runnerJS\pages\ExportPage.js
+include\common\runnerJS\pages\ImportPage.js include\runnerJS\pages\ImportPage.js
+include\common\runnerJS\pages\RegisterPage.js include\runnerJS\pages\RegisterPage.js
+include\common\runnerJS\pages\ChangePwdPage.js include\runnerJS\pages\ChangePwdPage.js
+
+include\common\runnerJS\SearchForm.js include\runnerJS\SearchForm.js
+include\common\runnerJS\FilterControl.js include\runnerJS\FilterControl.js
+include\common\runnerJS\SearchField.js include\runnerJS\SearchField.js
+include\common\runnerJS\SearchFormWithUI.js include\runnerJS\SearchFormWithUI.js
+include\common\runnerJS\SearchController.js include\runnerJS\SearchController.js
+include\common\runnerJS\SearchParamsLogger.js include\runnerJS\SearchParamsLogger.js
+include\common\runnerJS\RunnerForm.js include\runnerJS\RunnerForm.js
+include\common\runnerJS\DetPreview.js include\runnerJS\DetPreview.js
+##endif##
+
+include\common\runnerJS\RunnerAll.js include\runnerJS\RunnerAll.js
+
+include\common\runnerJS\MapManager.js include\runnerJS\MapManager.js
+##if @BUILDER.nMapProviderID==0##
+include\common\runnerJS\gmap.js include\runnerJS\gmap.js
+include\common\markerclusterer.js include\markerclusterer.js
+##elseif @BUILDER.nMapProviderID==1##
+plugins\OpenStreetMap\ plugins\
+include\common\runnerJS\osmap.js include\runnerJS\osmap.js
+##else##
+include\common\runnerJS\bingmap.js include\runnerJS\bingmap.js
+##endif##
+
+##if @BUILDER.pCaptchaSettings.nType == 1##
+include\common\runnerJS\ReCaptcha.js include\runnerJS\ReCaptcha.js
+##endif##
+
+##if @BUILDER.tables[arrFieldObj[viewFormats[strViewFormat==FORMAT_VIDEO || strViewFormat==FORMAT_DATABASE_VIDEO].len].len].len##
+include\common\html5video\ include\video\
+include\common\html5video\jarisplayer.swf jarisplayer.swf
+##endif##
+
+##if @BUILDER.m_bDebug##
+include\common\runnerJS\RunnerBase.js include\runnerJS\RunnerBase.js
+##endif##
+
+
+
+include\common\yui\yui-min.js include\yui\yui-min.js
+##if @BUILDER.m_bDebug##
+include\common\yui include\yui
+##endif##
+
+combo.php combo.php
+include\common\yui\yui-min.js include\yui\yui-min.js
+include\common\yui\yui.lib include\yui\yui.lib
+include\common\yui\yuicss.lib include\yui\yuicss.lib
+
+##if @BUILDER.tables[resizeColumns].len##
+include\common\runnerJS\RunnerResizeGrid.js include\runnerJS\RunnerResizeGrid.js
+##endif##
+
+##if @BUILDER.tables[arrFieldObj[editFormats[useTimePicker].len].len].len##
+include\common\timepickr_jquery.timepickr.js include\timepickr_jquery.timepickr.js
+##endif##
+
+##if @BUILDER.tables[arrFieldObj[viewFormats[strViewFormat==FORMAT_MAP].len].len].len || @BUILDER.tables[GeocodingSettings.bGeocodingEnabled].len##
+geocoding.php geocoding.php
+##endif##
+
+##if @BUILDER.tables[arrFieldObj[editFormats[strEditFormat==EDIT_FORMAT_FILE].len].len].len##
+include\common\mupload.js include\mupload.js
+##endif##
+
+##if @BUILDER.tables[arrFieldObj[viewFormats[strViewFormat==FORMAT_FILE || strViewFormat==FORMAT_AUDIO || strViewFormat==FORMAT_VIDEO].len].len].len##
+download.php download.php
+##endif##
+
+##if @BUILDER.tables[bShowFirst==1].len##
+fulltext.php fulltext.php
+##endif##
+
+checkduplicates.php checkduplicates.php
+
+imager.php imager.php
+
+##if @BUILDER.tables[arrFieldObj[editFormats[pLookupObj.arrLookupAutocompletionPairs.len].len].len].len##
+autofillfields.php autofillfields.php
+##endif##
+
+include\lookuplinks.php include\lookuplinks.php
+
+
+##if @BUILDER.m_strRTEType==RTE_INNOVA && @BUILDER.tables[arrFieldObj[editFormats[strEditFormat==EDIT_FORMAT_TEXT_AREA && bUseRTE].len].len].len##
+innova.php innova.php
+##endif##
+
+##if @BUILDER.tables[arrFieldObj[viewFormats[strViewFormat==FORMAT_DATABASE_FILE || strViewFormat==FORMAT_DATABASE_AUDIO || strViewFormat==FORMAT_DATABASE_VIDEO].len || editFormats[strEditFormat==EDIT_FORMAT_DATABASE_FILE].len].len].len##
+getfile.php getfile.php
+##endif##
+
+##if @BUILDER.m_strRTEType==RTE_BASIC &&  @BUILDER.tables[arrFieldObj[editFormats[strEditFormat==EDIT_FORMAT_TEXT_AREA && bUseRTE].len].len].len##
+rte.php rte.php
+##endif##
+
+##if @BUILDER.bDynamicPermissions || @BUILDER.tables[bSearchSuggest].len##
+searchsuggest.php searchsuggest.php
+##endif##
+
+lookupsuggest.php lookupsuggest.php
+
+index.htm index.htm
+
+templates\error.htm templates\error.htm
+
+templates\mainmenu.htm templates\oldmain_mainmenu.htm .menu.main
+templates\mainmenu_horiz.htm templates\oldmain_mainmenu_horiz.htm .menu.main
+templates\mainmenu_quickjump.htm templates\main_mainmenu_quickjump.htm .menu.main
+include\menunodes.php include\menunodes_main.php .menu.main
+
+templates\newmainmenu.htm templates\main_mainmenu.htm .menu.main
+templates\newmainmenu_m.htm templates\main_mainmenu_m.htm .menu.main
+templates\newmainmenu_horiz.htm templates\main_mainmenu_horiz.htm .menu.main
+templates\bsmenu_horiz.htm templates\bsmain_mainmenu_horiz.htm .menu.main
+templates\bsmenu.htm templates\bsmain_mainmenu_tree.htm .menu.main
+
+
+##if @BUILDER.bDynamicPermissions##
+include\menunodes_adminarea.php include\menunodes_adminarea.php
+
+templates\mainmenu_adminarea.htm templates\oldadminarea_mainmenu.htm
+templates\mainmenu_adminarea_horiz.htm templates\oldadminarea_mainmenu_horiz.htm
+templates\mainmenu_adminarea_preview.htm templates\oldadminarea_mainmenu_preview.htm
+
+templates\newmainmenu_adminarea.htm templates\adminarea_mainmenu.htm
+templates\newmainmenu_adminarea.htm templates\adminarea_mainmenu_m.htm
+templates\newmainmenu_adminarea_horiz.htm templates\adminarea_mainmenu_horiz.htm
+templates\bsmenu_adminarea_horiz.htm templates\bsadminarea_mainmenu_horiz.htm
+templates\newmainmenu_adminarea_preview.htm templates\adminarea_mainmenu_preview.htm
+templates\newmainmenu_adminarea_horiz_preview.htm templates\adminarea_mainmenu_horiz_preview.htm
+templates\newmainmenu_adminarea_quickjump.htm templates\adminarea_mainmenu_quickjump.htm
+##endif##
+
+
+##foreach @BUILDER.m_arrProjectMenus as @m filter @m.strMenuName!=WELCOME_MENU##
+templates\newmainmenu_m.htm templates\##@m.m_strMenuName##_mainmenu_m.htm .menu.##@m.m_strMenuName##
+templates\mainmenu.htm templates\##@m.m_strMenuName##_mainmenu.htm .menu.##@m.m_strMenuName##
+templates\mainmenu_horiz.htm templates\##@m.m_strMenuName##_mainmenu_horiz.htm .menu.##@m.m_strMenuName##
+templates\mainmenu_quickjump.htm templates\##@m.m_strMenuName##_mainmenu_quickjump.htm .menu.##@m.m_strMenuName##
+templates\bsmenu_horiz.htm templates\bs##@m.m_strMenuName##_mainmenu_horiz.htm .menu.##@m.m_strMenuName##
+templates\bsmenu.htm templates\bs##@m.m_strMenuName##_mainmenu_tree.htm .menu.##@m.m_strMenuName##
+include\menunodes.php include\menunodes_##@m.m_strMenuName##.php .menu.##@m.m_strMenuName##
+templates\newmainmenu_horiz.htm templates\##@m.m_strMenuName##_mainmenu_horiz.htm .menu.##@m.m_strMenuName##
+templates\newmainmenu.htm templates\##@m.m_strMenuName##_mainmenu.htm .menu.##@m.m_strMenuName##
+##endfor##
+
+##foreach @BUILDER.m_arrProjectMenus as @m filter @m.strMenuName==WELCOME_MENU##
+templates\bsmenu_welcome.htm templates\bs##@m.m_strMenuName##_mainmenu.htm .menu.##@m.m_strMenuName##
+include\menunodes.php include\menunodes_##@m.m_strMenuName##.php .menu.##@m.m_strMenuName##
+##endfor##
+
+
+templates\loadindicator.htm templates\loadindicator.htm
+include\displaymenu.php include\displaymenu.php
+include\menuitem.php include\menuitem.php
+
+include\common\cookies.js include\cookies.js
+
+menu.php menu.php
+templates\menu.htm templates\menu.htm
+
+##checkAnyEncryptionUsing()##
+##if @anyEncryptionUsed##
+ciphcoding.php ciphcoding.php
+##endif##
+
+##if @BUILDER.bSection508Compatibility##
+helpshortcut.php helpshortcut.php
+##endif##
+
+##if @BUILDER.pCaptchaSettings.nType == 0##
+securitycode.swf securitycode.swf
+securitycode.php securitycode.php
+##endif##
+
+##if @BUILDER.bCreateLoginPage##
+classes\loginpage.php classes\loginpage.php
+login.php login.php
+templates\login.htm templates\login.htm
+
+##if @BUILDER.nLoginMethod==LOGIN_AD##
+classes\loginpage_ad.php classes\loginpage_ad.php
+##endif##
+
+##if (@BUILDER.bCreateLoginPage && @BUILDER.m_nLoginMethod==SECURITY_TABLE && @BUILDER.bFacebookLogin)##
+plugins\facebook\facebook.php plugins\facebook\facebook.php
+plugins\facebook\base_facebook.php plugins\facebook\base_facebook.php
+plugins\facebook\fb_ca_chain_bundle.crt plugins\facebook\fb_ca_chain_bundle.crt
+##endif##
+
+##if @BUILDER.Registration.bNewUserPage && @BUILDER.nLoginMethod==SECURITY_TABLE##
+register.php register.php ##@BUILDER.strLoginTable##
+classes\registerpage.php classes\registerpage.php
+templates\register.htm templates\register.htm ##@BUILDER.strLoginTable##
+templates\register_success.htm templates\register_success.htm
+##with @BUILDER.Tables{@BUILDER.strLoginDataSource} as @userTable##
+##foreach @userTable.arrRegisterTabs as @tab##
+templates\tab.htm templates\##@userTable.strShortTableName##_register_##@tab.strTabId##.htm .registerTab.##@tab.strTabId##.table.##@userTable.strDataSourceTable##
+##endfor##
+##endwith##
+##endif##
+
+##if @BUILDER.Registration.bChangePwdPage##
+changepwd.php changepwd.php
+templates\changepwd.htm templates\changepwd.htm
+templates\changepwd_success.htm templates\changepwd_success.htm
+classes\changepwdpage.php classes\changepwdpage.php
+##endif##
+
+##if @BUILDER.Registration.bRemindPwdPage##
+remind.php remind.php
+templates\remind.htm templates\remind.htm
+templates\remind_success.htm templates\remind_success.htm
+classes\remindpwdpage.php classes\remindpwdpage.php
+##endif##
+
+##if @BUILDER.m_bDynamicPermissions##
+templates\admin_rights_list.htm templates\admin_rights_list.htm admin_rights
+ug_rights.php admin_rights_list.php admin_rights
+##if @BUILDER.nLoginMethod==SECURITY_TABLE##
+templates\admin_members_list.htm templates\admin_members_list.htm admin_members
+ug_members.php admin_members_list.php admin_members
+##endif##
+##if @BUILDER.nLoginMethod==SECURITY_AD##
+templates\admin_admembers_list.htm templates\admin_admembers_list.htm admin_admembers
+ad_members.php admin_admembers_list.php admin_admembers
+##endif##
+ug_group.php ug_group.php
+##endif##
+##endif##
+
+##if @BUILDER.arrLanguages.len>1##
+include\languages.php include\languages.php
+##endif##
+
+##foreach @BUILDER.arrLanguages as @l##
+include\common\runnerJS\constants\language\RunnerLang.js include\lang\##langfile @l##.js .language.##@l##
+include\lang\lang.php include\lang\##langfile @l##.php .language.##@l##
+##endfor##
+
+##foreach @BUILDER.Tables as @t filter @t.nType==titDASHBOARD##
+templates\dashboard.htm templates\##@t.strShortTableName##_dashboard.htm ##@t.strDataSourceTable##
+dashboard.php ##@t.strShortTableName##_dashboard.php ##@t.strDataSourceTable##
+include\dashsettings.php include\##@t.strShortTableName##_settings.php ##@t.strDataSourceTable##
+include\dashvariables.php include\##@t.strShortTableName##_variables.php ##@t.strDataSourceTable##
+##if @t.pDashboard.arrFields[bAdvancedSearch].len##
+templates\search.htm templates\##@t.strShortTableName##_search.htm ##@t.strDataSourceTable##
+search.php ##@t.strShortTableName##_search.php ##@t.strDataSourceTable##
+##endif##
+##if @t.arrEventHandlers.len || @t.controlLinks.len##
+include\events.php include\##@t.strShortTableName##_events.php ##@t.strDataSourceTable##
+##endif##
+##endfor##
+
+##foreach @BUILDER.Tables as @t filter @t.nType==titTABLE || @t.nType==titVIEW##
+##if @t.bList##
+
+templates\list.htm templates\##@t.strShortTableName##_list.htm ##@t.strDataSourceTable##
+
+##if @t.strDataSourceTable!="admin_rights" && @t.strDataSourceTable!="admin_members" && @t.strDataSourceTable!="admin_admembers"##
+list.php ##@t.strShortTableName##_list.php ##@t.strDataSourceTable##
+##endif##
+
+##if @t.arrMasterTables[nDetailPreview!=dpNONE].len##
+detailspreview.php ##@t.strShortTableName##_detailspreview.php ##@t.strDataSourceTable##
+templates\detailspreview.htm templates\##@t.strShortTableName##_detailspreview.htm ##@t.strDataSourceTable##
+##endif##
+
+##endif##
+
+##if @BUILDER.Tables[arrMasterTables[strMasterTable=@t.strDataSourceTable && bDisplayInfo].len].len ##
+templates\masterlist.htm templates\##@t.strShortTableName##_masterlist.htm ##@t.strDataSourceTable##
+templates\masterprint.htm templates\##@t.strShortTableName##_masterprint.htm ##@t.strDataSourceTable##
+##endif##
+##if @t.bPrinterFriendly##
+templates\print.htm templates\##@t.strShortTableName##_print.htm ##@t.strDataSourceTable##
+print.php ##@t.strShortTableName##_print.php ##@t.strDataSourceTable##
+##endif##
+##if @t.bExportTo##
+templates\export.htm templates\##@t.strShortTableName##_export.htm ##@t.strDataSourceTable##
+export.php ##@t.strShortTableName##_export.php ##@t.strDataSourceTable##
+include\export_functions.php include\export_functions.php
+include\export_functions_excel.php include\export_functions_excel.php
+##endif##
+##if @t.bImport##
+templates\import.htm templates\##@t.strShortTableName##_import.htm ##@t.strDataSourceTable##
+import.php ##@t.strShortTableName##_import.php ##@t.strDataSourceTable##
+##endif##
+
+##if @t.bEdit || @t.bInlineEdit##
+edit.php ##@t.strShortTableName##_edit.php ##@t.strDataSourceTable##
+##endif##
+##if @t.bEdit || (@BUILDER.bDynamicPermissions && @t.strDataSourceTable == "admin_users" && @t.bInlineEdit && @BUILDER.bBuildMobile)##
+templates\edit.htm templates\##@t.strShortTableName##_edit.htm ##@t.strDataSourceTable##
+##foreach @t.arrEditTabs as @tab##
+templates\tab.htm templates\##@t.strShortTableName##_edit_##@tab.strTabId##.htm .editTab.##@tab.strTabId##.table.##@t.strDataSourceTable##
+##endfor##
+##endif##
+##if @t.bInlineEdit##
+templates\inline_edit.htm templates\##@t.strShortTableName##_inline_edit.htm ##@t.strDataSourceTable##
+##endif##
+
+
+##if @t.bAdd || @t.bInlineAdd##
+add.php ##@t.strShortTableName##_add.php ##@t.strDataSourceTable##
+##endif##
+##if @t.bAdd || (@BUILDER.bDynamicPermissions && @t.strDataSourceTable == "admin_users" && @t.bInlineAdd && @BUILDER.bBuildMobile)##
+templates\add.htm templates\##@t.strShortTableName##_add.htm ##@t.strDataSourceTable##
+##foreach @t.arrAddTabs as @tab##
+templates\tab.htm templates\##@t.strShortTableName##_add_##@tab.strTabId##.htm .addTab.##@tab.strTabId##.table.##@t.strDataSourceTable##
+##endfor##
+##endif##
+##if @t.bInlineAdd##
+templates\inline_add.htm templates\##@t.strShortTableName##_inline_add.htm ##@t.strDataSourceTable##
+##endif##
+
+##if @t.arrFieldObj[bAdvancedSearch].len##
+search.php ##@t.strShortTableName##_search.php ##@t.strDataSourceTable##
+templates\search.htm templates\##@t.strShortTableName##_search.htm ##@t.strDataSourceTable##
+##endif##
+##if @t.arrFieldObj[editFormats[strEditFormat==EDIT_FORMAT_LOOKUP_WIZARD && pLookupObj.bUseCategory].len].len##
+autocomplete.php ##@t.strShortTableName##_autocomplete.php ##@t.strDataSourceTable##
+##endif##
+
+
+##if @t.bView##
+view.php ##@t.strShortTableName##_view.php ##@t.strDataSourceTable##
+templates\view.htm templates\##@t.strShortTableName##_view.htm ##@t.strDataSourceTable##
+##foreach @t.arrViewTabs as @tab##
+templates\viewtab.htm templates\##@t.strShortTableName##_view_##@tab.strTabId##.htm .viewTab.##@tab.strTabId##.table.##@t.strDataSourceTable##
+##endfor##
+##endif##
+
+include\variables.php include\##@t.strShortTableName##_variables.php ##@t.strDataSourceTable##
+include\settings.php include\##@t.strShortTableName##_settings.php ##@t.strDataSourceTable##
+
+##if @t.arrEventHandlers.len || @t.controlLinks.len##
+include\events.php include\##@t.strShortTableName##_events.php ##@t.strDataSourceTable##
+##elseif @t.strDataSourceTable=="admin_members" && @BUILDER.controlLinks[page==PAGE_ADMIN_MEMBERS].len##
+include\events.php include\##@t.strShortTableName##_events.php ##@t.strDataSourceTable##
+##elseif @t.strDataSourceTable=="admin_rights" && @BUILDER.controlLinks[page==PAGE_ADMIN_RIGHTS].len##
+include\events.php include\##@t.strShortTableName##_events.php ##@t.strDataSourceTable##
+##endif##
+
+##endfor##
+
+
+buttonhandler.php buttonhandler.php
+
+
+##foreach @BUILDER.Tables as @t##
+##set @tableHasButtons=0##
+##if @t.arrEventHandlers.len || @t.controlLinks.len##
+	##set @tableHasButtons=1##
+##elseif @t.arrMasterTables[@BUILDER.tables{@element.strMasterTable}.controlLinks[page==PAGE_MASTER_INFO_LIST].len].len##
+	##set @tableHasButtons=1##
+##endif##
+##if @tableHasButtons##
+include\common\runnerJS\events\pageevents.js include\runnerJS\events\pageevents_##@t.strShortTableName##.js ##@t.strDataSourceTable##
+##endif##
+##endfor##
+
+##if @BUILDER.arrEventHandlers.len || @BUILDER.controlHandlers[strEventID == "EVENT_BUTTON"].len##
+include\common\runnerJS\events\globalevents.js include\runnerJS\events\globalevents.js
+##endif##
+
+##foreach @BUILDER.Tables as @t filter @t.nType==titREPORT##
+templates\report.htm templates\##@t.strShortTableName##_report.htm ##@t.strDataSourceTable##
+templates\export.htm templates\##@t.strShortTableName##_export.htm ##@t.strDataSourceTable##
+
+report.php ##@t.strShortTableName##_report.php ##@t.strDataSourceTable##
+export.php ##@t.strShortTableName##_export.php ##@t.strDataSourceTable##
+
+include\variables.php include\##@t.strShortTableName##_variables.php ##@t.strDataSourceTable##
+include\settings.php include\##@t.strShortTableName##_settings.php ##@t.strDataSourceTable##
+
+##if @t.arrEventHandlers.len || @t.controlLinks.len##
+include\events.php include\##@t.strShortTableName##_events.php ##@t.strDataSourceTable##
+##endif##
+
+##if @t.arrFieldObj[viewFormats[strViewFormat==FORMAT_FILE].len].len##
+download.php ##@t.strShortTableName##_download.php ##@t.strDataSourceTable##
+##endif##
+
+##if @t.arrFieldObj[bAdvancedSearch].len##
+search.php ##@t.strShortTableName##_search.php ##@t.strDataSourceTable##
+templates\search.htm templates\##@t.strShortTableName##_search.htm ##@t.strDataSourceTable##
+
+##if @t.arrFieldObj[editFormats[strEditFormat==EDIT_FORMAT_LOOKUP_WIZARD && pLookupObj.bUseCategory].len].len##
+autocomplete.php ##@t.strShortTableName##_autocomplete.php ##@t.strDataSourceTable##
+##endif##
+##endif##
+
+##if @t.bPrinterFriendly##
+templates\rprint.htm templates\##@t.strShortTableName##_rprint.htm ##@t.strDataSourceTable##
+rprint.php ##@t.strShortTableName##_print.php ##@t.strDataSourceTable##
+##endif##
+
+##if @BUILDER.Tables[arrMasterTables[strMasterTable=@t.strDataSourceTable && bDisplayInfo].len].len ##
+templates\masterreport.htm templates\##@t.strShortTableName##_masterreport.htm ##@t.strDataSourceTable##
+templates\masterrprint.htm templates\##@t.strShortTableName##_masterrprint.htm ##@t.strDataSourceTable##
+##endif##
+
+##endfor##
+
+##foreach @BUILDER.Tables as @t filter @t.nType==titCHART##
+templates\chart.htm templates\##@t.strShortTableName##_chart.htm ##@t.strDataSourceTable##
+chart.php ##@t.strShortTableName##_chart.php ##@t.strDataSourceTable##
+include\variables.php include\##@t.strShortTableName##_variables.php ##@t.strDataSourceTable##
+include\settings.php include\##@t.strShortTableName##_settings.php ##@t.strDataSourceTable##
+
+##if @t.arrEventHandlers.len || @t.controlLinks.len##
+include\events.php include\##@t.strShortTableName##_events.php ##@t.strDataSourceTable##
+##endif##
+
+##if @BUILDER.Tables[arrMasterTables[strMasterTable=@t.strDataSourceTable && bDisplayInfo].len].len ##
+templates\masterchart.htm templates\##@t.strShortTableName##_masterchart.htm ##@t.strDataSourceTable##
+##endif##
+
+##if @t.arrFieldObj[bAdvancedSearch].len##
+search.php ##@t.strShortTableName##_search.php ##@t.strDataSourceTable##
+templates\search.htm templates\##@t.strShortTableName##_search.htm ##@t.strDataSourceTable##
+##if @t.arrFieldObj[editFormats[strEditFormat==EDIT_FORMAT_LOOKUP_WIZARD && pLookupObj.bUseCategory].len].len##
+autocomplete.php ##@t.strShortTableName##_autocomplete.php ##@t.strDataSourceTable##
+##endif##
+##endif##
+
+##endfor##
+
+##if @BUILDER.Tables[arrMasterTables.len].len##
+detreccount.php detreccount.php
+##endif##
+
+
+connections\ConnectionManager.php connections\ConnectionManager.php
+connections\ConnectionManagerConfig.php connections\ConnectionManagerConfig.php
+connections\Connection.php connections\Connection.php
+
+
+##if @BUILDER.m_strRTEType==RTE_INNOVA && @BUILDER.tables[arrFieldObj[editFormats[bUseRTE].len].len].len##
+plugins\innovaeditor plugins\innovaeditor
+##endif##
+
+##if @BUILDER.m_strRTEType==RTE_CK && @BUILDER.tables[arrFieldObj[editFormats[bUseRTE].len].len].len##
+plugins\ckeditor plugins\ckeditor
+plugins\ckfinder plugins\ckfinder
+##endif##
+
+##if @BUILDER.m_strRTEType==RTE_BASIC && @BUILDER.tables[arrFieldObj[editFormats[bUseRTE].len].len].len##
+include\common\rte include\rte
+##endif##
+
+##set @_bViewPDF=0##
+##foreach @BUILDER.Tables as @t##
+##if @t.bViewPagePDF || @t.bPrinterPagePDF##
+	##set @_bViewPDF=1##
+##endif##
+##endfor##
+
+##if @_bViewPDF##
+plugins\dompdf plugins\dompdf
+plugins\fetcher.php plugins\fetcher.php
+plugins\page2pdf.php plugins\page2pdf.php
+plugins\defaultPDF.css styles\defaultPDF.css
+
+getpdf.php getpdf.php
+buildpdf.php buildpdf.php
+include\pdfnewwindow.js include\pdfnewwindow.js
+##endif##
+
+plugins\PHPExcel plugins\PHPExcel
+plugins\PHPExcel.php plugins\PHPExcel.php
+
+
+##if 1=2##
+include\layoutbuilder.php include\layoutbuilder.php
+connections\CustomConnection.php connections\CustomConnection.php
+connections\CustomConnectionTemplate.php connections\CustomConnectionTemplate.php
+include\query.php include\query.php
+include\reportfunctions.php include\reportfunctions.php
+include\dbcommon_preview.php include\dbcommon_preview.php
+include\common\rte\richtext.uncompressed.js include\richtext.uncompressed.js
+
+macros.txt macros.txt
+files.txt files.txt
+CommonMacroFunctions.txt CommonMacroFunctions.txt
+chart_preview.htm chart_preview.htm
+EventsCode.xml EventsCode.xml
+templates\lheader.htm templates\lheader.htm
+templates\lfooter.htm templates\lfooter.htm
+templates\rheader.htm templates\rheader.htm
+templates\rfooter.htm templates\rfooter.htm
+
+templates\menuitem_horiz.htm templates\menuitem_horiz.htm
+templates\menuitem_preview.htm templates\menuitem_preview.htm
+templates\menuitem.htm templates\menuitem.htm
+templates\lmenu.htm templates\lmenu.htm
+templates\styleVMenu.htm templates\styleVMenu.htm
+templates\styleGMenu.htm templates\styleGMenu.htm
+templates\topmenuitem_hpreview.htm templates\topmenuitem_hpreview.htm
+templates\mainmenu_hpreview.htm templates\mainmenu_hpreview.htm
+templates\topmenuitem.htm templates\topmenuitem.htm
+templates\mainmenu_preview.htm templates\mainmenu_preview.htm
+templates\mainmenu_horiz.htm templates\mainmenu_horiz.htm
+templates\topmenuitem_horiz.htm templates\topmenuitem_horiz.htm
+templates\topmenuitem_preview.htm templates\topmenuitem_preview.htm
+templates\mlmenu.htm templates\mlmenu.htm
+
+webreports webreports
+plugins plugins
+include\common\jquery.uncompressed.js include\common\jquery.uncompressed.js
+include\common include
+libs libs
+##endif##
+
+##if @BUILDER.tables[nType==titCHART].len##
+libs\js libs\js
+dchartdata.php dchartdata.php
+include\xml.php include\xml.php
+##endif##
+
+include\xtempl.php include\xtempl.php
+classes\xtempl_base.php classes\xtempl_base.php
+include\audit.php include\audit.php
+include\locking.php include\locking.php
+include\testing.php include\testing.php
+libs\excelreader.src libs\excelreader.php
+libs\gif.php libs\gif.php
+libs\oleread.inc libs\oleread.inc
+libs\phpmailer libs\phpmailer
+
+include\dal.php include\dal.php
+
+##foreach @BUILDER.arrConnections as @conn##
+##foreach @conn.dbtables as @t##
+include\dal\table.php include\dal\##@conn.strID g##_##@t.schema g##_##@t.name ag##.php .dbtable.##@t.schema##.##@t.name##.dbconn.##@conn.strID g##
+##endfor##
+##endfor##
+##if @BUILDER.bWebReports##
+webreports\classes\webreportpage.php classes\webreportpage.php
+
+libs\js libs\js
+webreports\images images
+webreports\include\css include\css
+webreports\include\fancybox include\fancybox
+webreports\include\js include\js
+webreports\include\ui include\ui
+libs libs
+dchartdata.php dchartdata.php
+
+webreports\reportfunctions.php include\reportfunctions.php
+
+include\xml.php include\xml.php
+webreports\dsearch.php dsearch.php
+webreports\dimager.php dimager.php
+webreports\templates\dsearch.htm templates\dsearch.htm
+webreports\web_query.php web_query.php
+webreports\templates\web_query.htm templates\web_query.htm
+
+webreports\dreport.php dreport.php
+webreports\get-state.php get-state.php
+webreports\save-state.php save-state.php
+webreports\save-style.php save-style.php
+webreports\save-admin.php save-admin.php
+webreports\webreport_admin.php webreport_admin.php
+webreports\webreport_sql.php webreport_sql.php
+
+webreports\dchart.php dchart.php
+webreports\dchart_preview.php dchart_preview.php
+webreports\webchart0.php webchart0.php
+webreports\webchart1.php webchart1.php
+webreports\webchart2.php webchart2.php
+webreports\webchart3.php webchart3.php
+webreports\webchart4.php webchart4.php
+webreports\webchart5.php webchart5.php
+webreports\webchart6.php webchart6.php
+webreports\webchart7.php webchart7.php
+
+webreports\webreport.php webreport.php
+webreports\webreport0.php webreport0.php
+webreports\webreport1.php webreport1.php
+webreports\webreport2.php webreport2.php
+webreports\webreport3.php webreport3.php
+webreports\webreport4.php webreport4.php
+webreports\webreport5.php webreport5.php
+webreports\webreport6.php webreport6.php
+webreports\webreport8.php webreport8.php
+webreports\webreport9.php webreport9.php
+
+webreports\templates\dchart.htm templates\dchart.htm
+webreports\templates\dchart_preview.htm templates\dchart_preview.htm
+webreports\templates\jump_report.htm templates\jump_report.htm
+webreports\templates\colorpicker.htm templates\colorpicker.htm
+webreports\templates\webreport_admin.htm templates\webreport_admin.htm
+webreports\templates\webreport_sql.htm templates\webreport_sql.htm
+
+webreports\templates\dreport.htm templates\dreport.htm
+webreports\templates\dreport1.htm templates\dreport1.htm
+webreports\templates\dreport2.htm templates\dreport2.htm
+webreports\templates\dreport3.htm templates\dreport3.htm
+webreports\templates\dreport5.htm templates\dreport5.htm
+webreports\templates\dreport_preview.htm templates\dreport_preview.htm
+webreports\templates\dreport1_preview.htm templates\dreport1_preview.htm
+webreports\templates\dreport2_preview.htm templates\dreport2_preview.htm
+webreports\templates\dreport3_preview.htm templates\dreport3_preview.htm
+webreports\templates\dreport5_preview.htm templates\dreport5_preview.htm
+webreports\templates\dreport5_style.htm templates\dreport5_style.htm
+
+webreports\templates\dprint.htm templates\dprint.htm
+webreports\templates\dprint1.htm templates\dprint1.htm
+webreports\templates\dprint2.htm templates\dprint2.htm
+webreports\templates\dprint3.htm templates\dprint3.htm
+webreports\templates\dprint5.htm templates\dprint5.htm
+
+webreports\templates\webchart0.htm templates\webchart0.htm
+webreports\templates\webchart1.htm templates\webchart1.htm
+webreports\templates\webchart2.htm templates\webchart2.htm
+webreports\templates\webchart3.htm templates\webchart3.htm
+webreports\templates\webchart4.htm templates\webchart4.htm
+webreports\templates\webchart4_gauge.htm templates\webchart4_gauge.htm
+webreports\templates\webchart4_ohlc.htm templates\webchart4_ohlc.htm
+webreports\templates\webchart5.htm templates\webchart5.htm
+webreports\templates\webchart6.htm templates\webchart6.htm
+webreports\templates\webchart7.htm templates\webchart7.htm
+
+webreports\templates\webreport.htm templates\webreport.htm
+webreports\templates\webreport0.htm templates\webreport0.htm
+webreports\templates\webreport1.htm templates\webreport1.htm
+webreports\templates\webreport2.htm templates\webreport2.htm
+webreports\templates\webreport3.htm templates\webreport3.htm
+webreports\templates\webreport4.htm templates\webreport4.htm
+webreports\templates\webreport5.htm templates\webreport5.htm
+webreports\templates\webreport6.htm templates\webreport6.htm
+webreports\templates\webreport8.htm templates\webreport8.htm
+webreports\templates\webreport9.htm templates\webreport9.htm
+
+webreports\include\actionscript.js include\js\actionscript.js
+webreports\include\js\chart.js include\js\chart.js
+##endif##
