@@ -897,3 +897,11 @@ webreports\templates\webreport9.htm templates\webreport9.htm
 webreports\include\actionscript.js include\js\actionscript.js
 webreports\include\js\chart.js include\js\chart.js
 ##endif##
+
+
+jalaliCalendar\bootstrap-datepicker.fa.min.js styles\bootstrap-datepicker.fa.min.js
+jalaliCalendar\bootstrap-datepicker.min.js styles\bootstrap-datepicker.min.js
+jalaliCalendar\jquery.js styles\jquery.js
+jalaliCalendar\pwt-date.js styles\pwt-date.js
+jalaliCalendar\persian-datepicker-0.4.5.css styles\persian-datepicker-0.4.5.css
+jalaliCalendar\persian-datepicker-0.4.5.js styles\persian-datepicker-0.4.5.js

@@ -1,29 +1,16 @@
 Runner.controls.EditPersianDate = Runner.extend(Runner.controls.Control,{
+	myVal: "value of my Field: ", 
+	
 	/**
 	 * Override constructor
 	 * @param {Object} cfg
 	 */
-	myVal: "value of my Field: ", 
-	constructor: function(cfg){		
-		this.addEvent(["change", "keyup"]);		
+	constructor: function( cfg ) {		
+		this.addEvent( ["change", "keyup"] );		
 		// call parent
 		Runner.controls.EditPersianDate.superclass.constructor.call(this, cfg);
 		this.myVal = this.getFieldSetting("myVal");
-		
-		//$("#"+this.valContId).datepicker({
-			// changeMonth: true,
-	          //  changeYear: true
-			
-			
-		//});
-		$(".apersiann").datepicker(
-            {
-                changeMonth: true,
-                changeYear: true
-            }
-		);
-		
-
+		//$(".apersiann2").pDatepicker();
 			
 	},
 	/**

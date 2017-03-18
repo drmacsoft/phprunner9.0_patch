@@ -11,6 +11,7 @@ Runner.controls.EditColorPicker = Runner.extend( Runner.controls.Control, {
 		Runner.controls.EditColorPicker.superclass.constructor.call( this, cfg );
 		
 		this.myVal = this.getFieldSetting("myVal");
+		
 		$("#" + this.valContId).miniColors({
 			letterCase: 'uppercase'
 		});		
