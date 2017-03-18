@@ -7,7 +7,11 @@ class Timely extends JalaliDate {
             $relativeTo = time();
         }
         $date2 = $date;
+		try{
         list($Y, $M, $D) = self::ExplodeGeneralDate($date2);
+		}catch(Exception $ee){
+		return '';	
+		}
         if ($Y < 1500) { //then it is Jalali Date
             $a = self::jalali_to_gregorian($Y, $M, $D);
             $a[1]=  str_pad($a[1], 2, "0",STR_PAD_LEFT);
