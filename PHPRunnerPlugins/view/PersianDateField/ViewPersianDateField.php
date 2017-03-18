@@ -1,7 +1,10 @@
 <?php
+include_once 'PersianDateFunctions.php';
 class ViewPersianDateField extends ViewControl
 {
 	static function init()
+	{}
+	public function initUserControl()
 	{}
 	
 	public function showDBValue(&$data, $keylink)
@@ -29,7 +32,8 @@ class ViewPersianDateField extends ViewControl
 	 */
 	public function getTextValue(&$data)
 	{
-		return format_persiandate( db2time( $data[ $this->field ] ) );
+		$f=new PersianDateFunctions();
+		return $f->format_persiandate( db2time( $data[ $this->field ] ) );
 	}
 }
 
